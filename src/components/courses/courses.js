@@ -6,6 +6,7 @@ const Courses = () =>{
     const pagina = 1;
     const [listaCourses, setListaCourses] = useState([{
         colecaoId: 0,
+        nome:  '',
         descricao: "Inicial"
     }]);
 
@@ -18,7 +19,7 @@ const Courses = () =>{
 
     return (
         <Row>
-            { listaCourses.map( (course)  => <Course titulo={course.descricao} />) }
+            { listaCourses.map( (course)  => <Course titulo={course.nome} descricao={course.descricao} />) }
         </Row>
     )
 };
