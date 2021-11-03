@@ -8,7 +8,6 @@ function Header(  ){
         <Navbar>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/courses">Courses</NavLink>
-        <NavLink to="/galery">Galeria de Fotos</NavLink>
         </Navbar>
     );
 }

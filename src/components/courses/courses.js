@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
-import { Row } from "react-materialize";
+import { Button, Container, Icon, Row } from "react-materialize";
+import { NavLink } from "react-router-dom";
 import Course from "./course";
 
 const Courses = () =>{
@@ -18,9 +19,21 @@ const Courses = () =>{
     }, pagina)
 
     return (
-        <Row>
-            { listaCourses.map( (course)  => <Course titulo={course.nome} descricao={course.descricao} />) }
-        </Row>
+        <Container>
+            <Row>
+                { listaCourses.map( (course)  => <Course titulo={course.nome} descricao={course.descricao} />) }
+            </Row>
+            <NavLink to="/create/course">
+            <Button
+                className="red"
+                floating
+                icon={<Icon>add</Icon>}
+                large
+                node="button"
+                waves="light"
+                />
+            </NavLink>
+        </Container>
     )
 };
 export default Courses
